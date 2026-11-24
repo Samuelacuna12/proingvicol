@@ -1,0 +1,45 @@
+.proing-detail {
+  width: min(100% - 40px, 1120px);
+  margin-inline: auto;
+  padding-block: clamp(48px, 8vw, 110px);
+}
+.proing-detail h1 {
+  max-width: 27ch;
+  margin: 16px 0 32px;
+}
+.proing-detail img {
+  display: block;
+  width: min(100%, 900px);
+  height: auto;
+  max-height: 700px;
+  object-fit: cover;
+}
+.proing-detail-actions {
+  margin-top: 32px;
+}
+.proing-detail-actions a, .proing-more {
+  display: inline-block;
+  border-radius: 5px;
+  background: var(--e-global-color-primary, #182a28);
+  color: #fff;
+  padding: 12px 20px;
+  font-weight: 600;
+}
+.proing-form-hint {
+  width: 100%;
+  margin: 8px 0 0;
+  padding-inline: 8px;
+  color: inherit;
+  font-size: 0.875rem;
+}
+.proing-form-hint a {
+  text-decoration: underline;
+}
+[data-proing-more][hidden] {
+  display: none !important;
+}
+.elementor .elementor-element.elementor-element-7be99eb:not(.elementor-motion-effects-element-type-background) {
+  background-image: url('/assets/portada-video.jpg');
+  background-position: center;
+  background-size: cover;
+}

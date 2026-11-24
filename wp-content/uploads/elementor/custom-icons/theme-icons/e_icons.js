@@ -1,0 +1,1 @@
+{"icons":["flag","heart","pay","rocket","layers","mail","pie","pin","star","trust","stats","sign-star","phone","layer","graph","fusion","finance","circles","building","bubble-finance","ai","quote","check","arrow-up","arrow-link-down","arrow-link-up","arrow-dawn","search","close","nav","minus","plus"]}

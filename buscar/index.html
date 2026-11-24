@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Buscar | Proingvicol</title>
+  <link rel="stylesheet" href="/assets/migration.css">
+  <script src="/assets/search.js" defer></script>
+</head>
+<body>
+  <main class="proing-detail">
+    <a href="/">Proingvicol</a>
+    <h1>Buscar en Proingvicol</h1>
+    <form action="/buscar/" method="get" role="search">
+      <label for="site-search">Buscar páginas y proyectos</label>
+      <input id="site-search" type="search" name="s" required>
+      <button type="submit">Buscar</button>
+    </form>
+    <p id="search-status" role="status"></p>
+    <ul id="search-results"></ul>
+  </main>
+</body>
+</html>
