@@ -19,15 +19,22 @@
 
     event.preventDefault();
     event.stopImmediatePropagation();
+    const consent = form.elements.namedItem('proing_privacy_consent');
+    if (!consent?.checked) {
+      consent?.reportValidity();
+      return;
+    }
     const isSubscription = form.dataset.proingContact === 'suscripcion';
     const subject = isSubscription ? 'Solicitud de suscripción' : 'Consulta para Proingvicol';
     const fields = Array.from(form.elements).flatMap(field => {
-      if (!field.name || field.disabled || !field.value ||
+      if (!field.name || field.name === consent.name || field.disabled || !field.value ||
           ['submit', 'button', 'hidden', 'file'].includes(field.type) ||
           (['checkbox', 'radio'].includes(field.type) && !field.checked)) return [];
       const label = field.labels?.[0]?.textContent.trim() || field.placeholder || field.name;
       return [label + ': ' + field.value.trim()];
     });
+    fields.push('Autorización: ' + consent.labels[0].textContent.trim());
+    fields.push('Política: https://proingvicol.com/privacy-policy/ (vigente desde el 24/11/2026)');
     const mail = document.createElement('a');
     mail.href = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) +
       '&body=' + encodeURIComponent(fields.join('\r\n\r\n'));

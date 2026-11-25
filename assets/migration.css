@@ -43,3 +43,19 @@
   background-position: center;
   background-size: cover;
 }
+.proing-privacy { max-width: 820px; }
+.proing-privacy h1, .proing-privacy h2 { color: #19483f; }
+.proing-privacy h2 { margin-top: 1.6em; font-size: clamp(1.25rem, 3vw, 1.65rem); }
+.proing-privacy ul { margin-bottom: 1rem; }
+.proing-privacy a, .proing-consent a, .proing-privacy-footer { text-decoration: underline; text-underline-offset: .17em; }
+.proing-privacy-footer { display: inline-block; margin-inline-start: 1em; }
+.proing-privacy-standalone { padding: 1rem; text-align: center; }
+.proing-consent { width: 100%; padding: 8px; font-size: .875rem; line-height: 1.5; }
+.proing-consent input[type="checkbox"] {
+  appearance: auto;
+  width: 1.05em;
+  height: 1.05em;
+  margin-inline-end: .28em;
+  vertical-align: middle;
+  accent-color: #19483f;
+}
